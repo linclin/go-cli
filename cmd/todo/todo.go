@@ -6,6 +6,7 @@ import (
 	"log/slog"
 	"os"
 
+	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
@@ -26,6 +27,7 @@ var TodoCmd = &cobra.Command{
 	},
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("todo name:", todoConfig.Name)
+		color.Blue("todo name: %s  ", todoConfig.Name)
 		slog.Info("todo name:", "name", todoConfig.Name)
 	},
 }
