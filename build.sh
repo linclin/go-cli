@@ -1,0 +1,1 @@
+go build -buildvcs=true -ldflags="-s -w" -o go-cli .
